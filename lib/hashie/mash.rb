@@ -16,5 +16,9 @@ module Hashie
           (self[method_name.to_s]) ? self[method_name.to_s] : nil
       end
     end
+
+    def respond_to_missing?(method_name, include_private = false)
+      true
+    end
   end
 end
