@@ -5,5 +5,5 @@ gemspec
 
 gem 'rake'
 gem 'minitest'
-gem 'turn'
 gem 'coveralls', require: false
+gem 'simplecov', require: false

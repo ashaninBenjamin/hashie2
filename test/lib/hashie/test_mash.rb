@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class TestMash < TestCase
+class Hashie::MashTest < TestCase
   def setup
     @name = "My Mash"
     @mash = Hashie::Mash.new

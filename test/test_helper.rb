@@ -1,10 +1,16 @@
-#require 'bundler/setup'
-require 'hashie'
+require 'bundler/setup'
+Bundler.require
+
 require 'minitest/autorun'
 Minitest.autorun
 
-require 'coveralls'
-Coveralls.wear!
+if ENV["TRAVIS"]
+  require 'coveralls'
+  Coveralls.wear!
+end
+
+require 'simplecov'
+SimpleCov.start if ENV['COVERAGE']
 
 class TestCase < MiniTest::Test
 
