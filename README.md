@@ -1,3 +1,6 @@
+
+[![Coverage Status](https://coveralls.io/repos/ashaninBenjamin/hashie2/badge.png?branch=master)](https://coveralls.io/r/ashaninBenjamin/hashie2?branch=master)
+[![Build Status](https://travis-ci.org/ashaninBenjamin/hashie2.png?branch=master)](https://travis-ci.org/ashaninBenjamin/hashie2)
 # Hashie
 
 TODO: Write a gem description
