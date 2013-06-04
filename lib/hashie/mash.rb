@@ -9,7 +9,7 @@ module Hashie
     def method_missing(method_name, *args, &block)
       case method_name.to_s[-1]
         when "?"
-          (self[method_name.to_s.chomp("?")]) ? true : false
+          !!(self[method_name.to_s.chomp("?")])
         when "="
           self[method_name.to_s.chomp("=")] = args.first
         else

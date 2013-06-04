@@ -13,7 +13,7 @@ require 'simplecov'
 SimpleCov.start if ENV['COVERAGE']
 
 class TestCase < MiniTest::Test
-  def load_fixture(filename)
-    File.read(File.dirname(__FILE__) + "/fixtures/#{filename}")
-  end
+
+  Dir[File.expand_path('../fixtures/*.rb', __FILE__)].each { |f| require f }
+
 end

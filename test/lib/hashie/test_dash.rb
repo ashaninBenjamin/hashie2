@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class Hashie::DashTest < TestCase
+
   def setup
     @name = "Bob"
     @p = Person.new(name: @name)
@@ -19,13 +20,13 @@ class Hashie::DashTest < TestCase
   end
 
   def test_broken_cases
-    assert_raise do
+    assert_raises ArgumentError do
       p = Person.new
     end
-    assert_raise do
+    assert_raises ArgumentError do
       @p.name = nil
     end
-    assert_raise do
+    assert_raises NoMethodError do
       @p[:awesome]
     end
   end
