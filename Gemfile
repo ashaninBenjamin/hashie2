@@ -6,4 +6,4 @@ gemspec
 gem 'rake'
 gem 'minitest'
 gem 'turn'
-gem 'coveralls', require: true
+gem 'coveralls', require: false
