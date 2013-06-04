@@ -1,5 +1,5 @@
 #require 'bundler/setup'
-
+require 'hashie'
 require 'minitest/autorun'
 Minitest.autorun
 

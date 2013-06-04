@@ -1,0 +1,20 @@
+module Hashie
+  class Mash < Hash
+    def initialize(hash = {})
+      hash.each_pair do |k, v|
+        self[k.to_s] = v
+      end
+    end
+
+    def method_missing(method_name, *args, &block)
+      case method_name.to_s[-1]
+        when "?"
+          (self[method_name.to_s.chomp("?")]) ? true : false
+        when "="
+          self[method_name.to_s.chomp("=")] = args.first
+        else
+          (self[method_name.to_s]) ? self[method_name.to_s] : nil
+      end
+    end
+  end
+end
